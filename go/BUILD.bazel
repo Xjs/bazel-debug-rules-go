@@ -1,0 +1,14 @@
+load("@io_bazel_rules_go//go:def.bzl", "nogo")
+
+nogo(
+    name = "vet",
+    vet = True,
+    visibility = ["//visibility:public"],
+)
+
+exports_files(
+    [
+        "def.bzl",
+    ],
+    visibility = ["//visibility:public"],
+)
